@@ -4,7 +4,7 @@ public class DmvSimulator {
 	public static void main(String []args) {
 		Random random = new Random();
 		int randomNumber = random.nextInt(200);
-		
+		int chance = random.nextInt(100);
 		
 		Boolean call = false; 
 		int numb = 1;
@@ -15,7 +15,12 @@ public class DmvSimulator {
 			if (randomNumber == numb) {
 				System.out.println(randomNumber);
 				call = true;
-				System.out.println("You dont have the required paperwork MWAHAHAHAHAHAHA!! :D ");
+				if(chance == 1) {
+					System.out.println("You have all required paperwork!");
+				}
+				else{
+					System.out.println("You dont have the required paperwork MWAHAHAHAHAHAHA!! :D ");
+				}
 				
 			}
 			else {
